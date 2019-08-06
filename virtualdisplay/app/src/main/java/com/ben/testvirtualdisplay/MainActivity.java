@@ -34,7 +34,7 @@ public class MainActivity extends Activity implements ImageReader.OnImageAvailab
     VirtualDisplay mVirtualDisplay;
 
     ImageReader mImageReader;
-    MyPresentation mMyPresentation;
+    CounterPresentation mCounterPresentation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,12 +67,12 @@ public class MainActivity extends Activity implements ImageReader.OnImageAvailab
         if (mVirtualDisplay != null) {
             Log.i(TAG, "create virtual display success");
 
-            if (mMyPresentation != null) {
-                mMyPresentation.dismiss();
+            if (mCounterPresentation != null) {
+                mCounterPresentation.dismiss();
             }
 
-            mMyPresentation = new MyPresentation(this, mVirtualDisplay.getDisplay());
-            mMyPresentation.show();
+            mCounterPresentation = new CounterPresentation(this, mVirtualDisplay.getDisplay());
+            mCounterPresentation.show();
         } else {
             Log.i(TAG, "create virtual display fail");
         }

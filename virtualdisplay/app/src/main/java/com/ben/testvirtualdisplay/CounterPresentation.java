@@ -8,7 +8,7 @@ import android.util.Log;
 import android.view.Display;
 import android.widget.TextView;
 
-public class MyPresentation extends Presentation {
+public class CounterPresentation extends Presentation {
 
     final String TAG = "Presentation";
 
@@ -28,7 +28,7 @@ public class MyPresentation extends Presentation {
         }
     };
 
-    public MyPresentation(Context outerContext, Display display) {
+    public CounterPresentation(Context outerContext, Display display) {
         super(outerContext, display);
         mContext = outerContext;
     }
@@ -44,7 +44,7 @@ public class MyPresentation extends Presentation {
         super.onCreate(savedInstanceState);
         Log.i(TAG, "onCreate");
 
-        setContentView(R.layout.my_presentation);
+        setContentView(R.layout.counter_presentation);
         counter_text = findViewById(R.id.counter_text);
 
         updateCounterText();
